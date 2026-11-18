@@ -1,0 +1,16 @@
+{% extends "club/base.html" %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+<div class="col-md-7 col-lg-6">
+<div class="card bg-dark border-secondary">
+<div class="card-body p-4">
+<h2 class="mb-4">Регистрация ученика</h2>
+<p class="text-secondary">Новая учётная запись автоматически получает роль ученика.</p>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button class="btn btn-primary w-100" type="submit">Создать аккаунт</button>
+</form>
+</div></div></div></div>
+{% endblock %}

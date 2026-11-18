@@ -1,0 +1,25 @@
+{% extends "club/base.html" %}
+{% block title %}Администратор{% endblock %}
+{% block content %}
+<h1>Панель администратора</h1>
+<p class="text-secondary">Управление данными спортивного клуба.</p>
+<div class="row g-3 mt-1">
+{% for label, value in stats %}
+{% endfor %}
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ students_count }}</div><div>Ученики</div></div></div>
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ trainers_count }}</div><div>Тренеры</div></div></div>
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ groups_count }}</div><div>Группы</div></div></div>
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ subjects_count }}</div><div>Занятия</div></div></div>
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ schedule_count }}</div><div>Записи расписания</div></div></div>
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ grades_count }}</div><div>Оценки</div></div></div>
+<div class="col-md-3"><div class="stat-card"><div class="stat-number">{{ payments_count }}</div><div>Платежи</div></div></div>
+</div>
+
+<div class="mt-4 d-flex flex-wrap gap-2">
+<a class="btn btn-primary" href="/admin/">Открыть Django Admin</a>
+<a class="btn btn-outline-light" href="{% url 'admin_schedule' %}">Расписание</a>
+<a class="btn btn-outline-light" href="{% url 'admin_schedule_add' %}">+ Расписание</a>
+<a class="btn btn-outline-light" href="{% url 'admin_grade_add' %}">+ Оценка</a>
+<a class="btn btn-outline-light" href="{% url 'admin_payment_add' %}">+ Платёж</a>
+</div>
+{% endblock %}

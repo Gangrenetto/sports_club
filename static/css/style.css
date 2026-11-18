@@ -1,0 +1,303 @@
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+body {
+    background: #101318;
+    color: #e9ecef;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card,
+.stat-card {
+    background: #171b22 !important;
+    color: #e9ecef !important;
+}
+
+.hero {
+    background: linear-gradient(135deg, #171b22, #202633);
+    border: 1px solid #343a46;
+}
+
+.stat-card {
+    border: 1px solid #343a46;
+    border-radius: 16px;
+    padding: 22px;
+    height: 100%;
+}
+
+.stat-number {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f8f9fa !important;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+p {
+    color: #e9ecef;
+}
+
+.text-muted {
+    color: #adb5bd !important;
+}
+
+small {
+    color: #adb5bd;
+}
+
+.form-text {
+    color: #adb5bd !important;
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+label,
+.form-label {
+    color: #e9ecef !important;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   INPUTS / SELECT / TEXTAREA
+   ========================================================= */
+
+.form-control,
+.form-select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="tel"] {
+    background-color: #212529 !important;
+    color: #f8f9fa !important;
+
+    border: 1px solid #6c757d !important;
+    border-radius: 6px;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-control::placeholder,
+textarea::placeholder {
+    color: #adb5bd !important;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+
+    border-color: #6ea8fe !important;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+
+    outline: none;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-select {
+    color: #f8f9fa !important;
+}
+
+.form-select option {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: #6ea8fe;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9ec5fe;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+    color: #e9ecef !important;
+    border-color: #343a46 !important;
+}
+
+table th {
+    color: #f8f9fa !important;
+    font-weight: 600;
+}
+
+table td {
+    color: #e9ecef !important;
+    border-color: #343a46 !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    color: #ffffff;
+}
+
+.btn-primary:focus {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(13, 110, 253, 0.35);
+}
+
+
+/* =========================================================
+   ALERTS / NOTICES
+   ========================================================= */
+
+.alert {
+    color: #e9ecef;
+}
+
+.alert a {
+    color: #9ec5fe;
+}
+
+
+/* =========================================================
+   HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+    border-color: #343a46;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   DISABLED ELEMENTS
+   ========================================================= */
+
+.form-control:disabled,
+.form-control[readonly],
+.form-select:disabled {
+    background-color: #181c22 !important;
+    color: #868e96 !important;
+    border-color: #343a46 !important;
+}
+
+
+/* =========================================================
+   CHECKBOX / RADIO
+   ========================================================= */
+
+.form-check-label {
+    color: #e9ecef !important;
+}
+
+.form-check-input {
+    background-color: #212529;
+    border-color: #6c757d;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.card-title {
+    color: #f8f9fa !important;
+}
+
+.card-text {
+    color: #e9ecef !important;
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+    color: #ff6b6b !important;
+}
+
+.is-valid {
+    border-color: #198754 !important;
+}
+
+.valid-feedback {
+    color: #75d9a5 !important;
+}

@@ -1,0 +1,9 @@
+{% extends "club/base.html" %}
+{% block title %}Добавить оценку{% endblock %}
+{% block content %}
+<div class="row justify-content-center"><div class="col-lg-7">
+<div class="card bg-dark border-secondary"><div class="card-body p-4">
+<h2>Добавить оценку</h2>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn btn-primary">Сохранить</button></form>
+</div></div></div></div>
+{% endblock %}

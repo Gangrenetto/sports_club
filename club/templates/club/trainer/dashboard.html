@@ -1,0 +1,16 @@
+{% extends "club/base.html" %}
+{% block title %}Кабинет тренера{% endblock %}
+{% block content %}
+<h1>Кабинет тренера</h1>
+<p class="text-secondary">{{ trainer.last_name }} {{ trainer.first_name }} · {{ trainer.specialization|default:"Специализация не указана" }}</p>
+<div class="row g-3">
+<div class="col-md-4"><div class="stat-card"><div class="stat-number">{{ groups|length }}</div><div>Мои группы</div></div></div>
+<div class="col-md-4"><div class="stat-card"><div class="stat-number">{{ schedule|length }}</div><div>Ближайшие занятия</div></div></div>
+<div class="col-md-4"><div class="stat-card"><div class="stat-number">{{ grades|length }}</div><div>Последние оценки</div></div></div>
+</div>
+<div class="d-flex gap-2 flex-wrap mt-4">
+<a class="btn btn-primary" href="{% url 'trainer_schedule' %}">Моё расписание</a>
+<a class="btn btn-outline-light" href="{% url 'trainer_groups' %}">Мои группы</a>
+<a class="btn btn-outline-light" href="{% url 'trainer_grades' %}">Оценки</a>
+</div>
+{% endblock %}

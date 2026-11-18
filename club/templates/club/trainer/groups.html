@@ -1,0 +1,21 @@
+{% extends "club/base.html" %}
+{% block title %}Мои группы{% endblock %}
+{% block content %}
+<h1>Мои группы</h1>
+<div class="row g-3 mt-1">
+{% for group in groups %}
+<div class="col-md-6">
+<div class="card bg-dark border-secondary h-100">
+<div class="card-body">
+<h4>{{ group.name }}</h4>
+<p class="text-secondary">{{ group.description|default:"Описание отсутствует." }}</p>
+<h6>Ученики</h6>
+<ul>
+{% for student in group.students.all %}
+<li>{{ student.last_name }} {{ student.first_name }}</li>
+{% empty %}<li class="text-secondary">Учеников пока нет.</li>{% endfor %}
+</ul>
+</div></div></div>
+{% empty %}<p>Групп пока нет.</p>{% endfor %}
+</div>
+{% endblock %}

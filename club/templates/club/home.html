@@ -1,0 +1,28 @@
+{% extends "club/base.html" %}
+{% block title %}Спортивный клуб{% endblock %}
+{% block content %}
+<div class="hero p-5 rounded-4 mb-4">
+    <h1 class="display-5 fw-bold">Система управления спортивным клубом</h1>
+    <p class="lead text-secondary">Ученики, тренеры, группы, оценки, платежи и расписание в одном месте.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'public_schedule' %}">Посмотреть расписание</a>
+</div>
+
+<h2 class="mb-3">Ближайшие занятия</h2>
+<div class="row g-3">
+{% for item in schedule %}
+    <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark border-secondary h-100">
+            <div class="card-body">
+                <div class="text-primary fw-bold">{{ item.date|date:"d.m.Y" }}</div>
+                <h5>{{ item.subject }}</h5>
+                <div>{{ item.start_time|time:"H:i" }} — {{ item.end_time|time:"H:i" }}</div>
+                <div class="text-secondary mt-2">{{ item.group }} · {{ item.trainer }}</div>
+                {% if item.room %}<div class="small text-secondary">Зал: {{ item.room }}</div>{% endif %}
+            </div>
+        </div>
+    </div>
+{% empty %}
+    <p class="text-secondary">Опубликованных занятий пока нет.</p>
+{% endfor %}
+</div>
+{% endblock %}

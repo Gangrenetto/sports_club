@@ -1,0 +1,16 @@
+{% extends "club/base.html" %}
+{% block title %}Кабинет ученика{% endblock %}
+{% block content %}
+<h1>Кабинет ученика</h1>
+<p class="text-secondary">{{ student.last_name }} {{ student.first_name }}</p>
+<div class="row g-3 my-2">
+<div class="col-md-4"><div class="stat-card"><div class="stat-number">{{ student.group|default:"—" }}</div><div>Группа</div></div></div>
+<div class="col-md-4"><div class="stat-card"><div class="stat-number">{{ average|floatformat:1|default:"—" }}</div><div>Средняя оценка</div></div></div>
+<div class="col-md-4"><div class="stat-card"><div class="stat-number">{{ payments|length }}</div><div>Последние платежи</div></div></div>
+</div>
+<div class="d-flex gap-2 flex-wrap mt-3">
+<a class="btn btn-primary" href="{% url 'student_schedule' %}">Моё расписание</a>
+<a class="btn btn-outline-light" href="{% url 'student_grades' %}">Мои оценки</a>
+<a class="btn btn-outline-light" href="{% url 'student_payments' %}">Мои платежи</a>
+</div>
+{% endblock %}
